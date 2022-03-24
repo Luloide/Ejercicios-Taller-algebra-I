@@ -1,6 +1,8 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
-import GHC.Base (RuntimeRep(TupleRep))
+{-# LANGUAGE FlexibleContexts #-}
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+import GHC.Base (RuntimeRep(TupleRep), VecElem (Int16ElemRep))
 {- 
 1 absoluto: calcula el valor absoluto de un numero entero.
 2 maximoabsoluto: devuelve el maximo entre el valor absoluto de dos numeros enteros.
@@ -51,4 +53,9 @@ ambosSon0_2 x y = False
 esMultiploDe :: Int -> Int -> Bool 
 esMultiploDe x y | (mod x y) == 0 = True
                  | otherwise = False
-    
+
+digitoUnidades :: Int -> Int
+digitoUnidades x = mod x 10
+
+digitoDecenas :: Int -> Int
+digitoDecenas x = mod (div x 10) 10
