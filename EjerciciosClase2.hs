@@ -37,3 +37,9 @@ posicPrimerPar (x, y, z) | esPar x = 1
                          | esPar z = 3
                          | otherwise = 4
                          where esPar n = mod n 2 == 0
+
+crearPar :: a -> b -> (a, b)
+crearPar x y = (x,y)
+
+invertir :: (a, b) -> (b, a)
+invertir (x, y) = (y, x)
