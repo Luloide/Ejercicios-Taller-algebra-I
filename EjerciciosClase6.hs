@@ -23,6 +23,7 @@ primerMultiplode45345 xs | xs == [] = undefined -- en el caso que no haya un num
                          | otherwise = primerMultiplode45345 (tail xs)
 
 --sumatoria usando pattern matching
+sumatoriaPM :: [Int] -> Int
 sumatoriaPM [] = 0
 sumatoriaPM ( x : xs ) = sumatoriaPM xs + x
 
